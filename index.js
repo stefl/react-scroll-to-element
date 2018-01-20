@@ -18,6 +18,8 @@ class Scroll extends React.Component {
 	}
 	handleClick(e) {
 		e.preventDefault();
+		e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
 		let elem = 0;
 		let scroll = true;
 		const { type, element, offset, timeout } = this.props;
